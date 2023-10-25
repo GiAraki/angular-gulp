@@ -1,6 +1,5 @@
 import gulp from "gulp";
 import ts from "gulp-typescript";
-
 import imagemin from "gulp-imagemin";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
@@ -14,6 +13,7 @@ gulp.task("minify-ts", function () {
     .pipe(
       ts({
         noImplicitAny: true,
+        experimentalDecorators: true,
         outDir: "output.js",
       })
     )
@@ -23,7 +23,7 @@ gulp.task("minify-ts", function () {
 // Comprimir as imagens
 gulp.task("minify-images", function () {
   return gulp
-    .src("src/assets/images/*")
+    .src("src/**/images/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/images"));
 });

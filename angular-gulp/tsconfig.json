@@ -18,14 +18,11 @@
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "amd", // ou "system"
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "target": "es6",
+    "module": "CommonJS", // ou "system"
+    "lib": ["es2020", "dom"]
   },
-  "include": ["src/**/*"],
+  
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
